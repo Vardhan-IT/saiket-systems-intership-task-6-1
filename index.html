@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmaStore - Online Shopping</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo-container">
+                <a href="#" class="logo">AmaStore</a>
+            </div>
+            <div class="location-container">
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="location-text">
+                    <span>Deliver to</span>
+                    <span class="location-bold">Select Location</span>
+                </div>
+            </div>
+            <div class="search-container">
+                <select id="search-category">
+                    <option value="all">All</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="clothing">Clothing</option>
+                    <option value="books">Books</option>
+                    <option value="home">Home</option>
+                </select>
+                <input type="text" id="search-input" placeholder="Search products...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="account-container">
+                <div class="account-dropdown">
+                    <span>Hello, Sign in</span>
+                    <span class="account-bold">Account & Lists <i class="fas fa-caret-down"></i></span>
+                    <div class="dropdown-content">
+                        <div class="dropdown-top">
+                            <button id="sign-in-btn">Sign in</button>
+                            <p>New customer? <a href="#">Start here</a></p>
+                        </div>
+                        <div class="dropdown-columns">
+                            <div class="dropdown-column">
+                                <h4>Your Lists</h4>
+                                <ul>
+                                    <li><a href="#">Create a List</a></li>
+                                    <li><a href="#">Find a List</a></li>
+                                    <li><a href="#">Wish List</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4>Your Account</h4>
+                                <ul>
+                                    <li><a href="#">Account</a></li>
+                                    <li><a href="#">Orders</a></li>
+                                    <li><a href="#">Recommendations</a></li>
+                                    <li><a href="#">Browsing History</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="orders-container">
+                <span>Returns</span>
+                <span class="orders-bold">& Orders</span>
+            </div>
+            <div class="cart-container">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+                <span>Cart</span>
+            </div>
+        </div>
+        <nav class="header-bottom">
+            <button id="menu-toggle"><i class="fas fa-bars"></i> All</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#">Today's Deals</a></li>
+                <li><a href="#">Customer Service</a></li>
+                <li><a href="#">Registry</a></li>
+                <li><a href="#">Gift Cards</a></li>
+                <li><a href="#">Sell</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-slider">
+            <div class="slider-container">
+                <div class="slide active">
+                    <img src="https://placehold.co/1200x400/333/FFF?text=Special+Deals" alt="Special Deals">
+                </div>
+                <div class="slide">
+                    <img src="https://placehold.co/1200x400/222/FFF?text=New+Arrivals" alt="New Arrivals">
+                </div>
+                <div class="slide">
+                    <img src="https://placehold.co/1200x400/444/FFF?text=Limited+Time+Offers" alt="Limited Time Offers">
+                </div>
+                <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <section class="product-grid">
+            <div class="product-card" data-id="1" data-category="electronics">
+                <div class="product-image">
+                    <img src="https://placehold.co/300x300/333/FFF?text=Laptop" alt="Laptop">
+                    <div class="product-badge">Sale</div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Premium Laptop</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(245)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price-current">$899.99</span>
+                        <span class="price-original">$1,199.99</span>
+                        <span class="price-discount">25% off</span>
+                    </div>
+                    <p class="product-shipping">Free shipping</p>
+                    <button class="add-to-cart-btn" data-id="1">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="2" data-category="electronics">
+                <div class="product-image">
+                    <img src="https://placehold.co/300x300/333/FFF?text=Headphones" alt="Headphones">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Wireless Headphones</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(187)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price-current">$79.99</span>
+                        <span class="price-original">$99.99</span>
+                        <span class="price-discount">20% off</span>
+                    </div>
+                    <p class="product-shipping">Free shipping</p>
+                    <button class="add-to-cart-btn" data-id="2">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="3" data-category="clothing">
+                <div class="product-image">
+                    <img src="https://placehold.co/300x300/333/FFF?text=T-Shirt" alt="T-Shirt">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Premium Cotton T-Shirt</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(423)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price-current">$19.99</span>
+                    </div>
+                    <p class="product-shipping">Free shipping with Prime</p>
+                    <button class="add-to-cart-btn" data-id="3">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="4" data-category="books">
+                <div class="product-image">
+                    <img src="https://placehold.co/300x300/333/FFF?text=Book" alt="Book">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Bestselling Novel</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(1,245)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price-current">$14.99</span>
+                        <span class="price-original">$24.99</span>
+                        <span class="price-discount">40% off</span>
+                    </div>
+                    <p class="product-shipping">Free shipping with Prime</p>
+                    <button class="add-to-cart-btn" data-id="4">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-categories">
+            <h2>Shop by Category</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <img src="https://placehold.co/200x200/333/FFF?text=Electronics" alt="Electronics">
+                    <h3>Electronics</h3>
+                </div>
+                <div class="category-card">
+                    <img src="https://placehold.co/200x200/333/FFF?text=Clothing" alt="Clothing">
+                    <h3>Clothing</h3>
+                </div>
+                <div class="category-card">
+                    <img src="https://placehold.co/200x200/333/FFF?text=Home" alt="Home">
+                    <h3>Home & Kitchen</h3>
+                </div>
+                <div class="category-card">
+                    <img src="https://placehold.co/200x200/333/FFF?text=Books" alt="Books">
+                    <h3>Books</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="deals-section">
+            <h2>Today's Deals</h2>
+            <div class="deals-grid">
+                <div class="deal-card">
+                    <div class="deal-image">
+                        <img src="https://placehold.co/200x200/333/FFF?text=Deal+1" alt="Deal 1">
+                    </div>
+                    <div class="deal-info">
+                        <div class="deal-discount">Up to 40% off</div>
+                        <p>Limited time deal</p>
+                    </div>
+                </div>
+                <div class="deal-card">
+                    <div class="deal-image">
+                        <img src="https://placehold.co/200x200/333/FFF?text=Deal+2" alt="Deal 2">
+                    </div>
+                    <div class="deal-info">
+                        <div class="deal-discount">Up to 30% off</div>
+                        <p>Limited time deal</p>
+                    </div>
+                </div>
+                <div class="deal-card">
+                    <div class="deal-image">
+                        <img src="https://placehold.co/200x200/333/FFF?text=Deal+3" alt="Deal 3">
+                    </div>
+                    <div class="deal-info">
+                        <div class="deal-discount">Up to 25% off</div>
+                        <p>Limited time deal</p>
+                    </div>
+                </div>
+                <div class="deal-card">
+                    <div class="deal-image">
+                        <img src="https://placehold.co/200x200/333/FFF?text=Deal+4" alt="Deal 4">
+                    </div>
+                    <div class="deal-info">
+                        <div class="deal-discount">Up to 50% off</div>
+                        <p>Limited time deal</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart <span id="sidebar-cart-count">(0)</span></h3>
+            <button id="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be added here dynamically -->
+            <div class="empty-cart-message">Your cart is empty</div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Subtotal:</span>
+                <span id="cart-subtotal">$0.00</span>
+            </div>
+            <button id="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <!-- Login Modal -->
+    <div class="login-modal" id="login-modal">
+        <div class="login-container">
+            <div class="login-header">
+                <h3>Sign In</h3>
+                <button id="close-login"><i class="fas fa-times"></i></button>
+            </div>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" id="login-submit-btn">Sign In</button>
+                <div class="form-footer">
+                    <p>New to AmaStore? <a href="#" id="create-account-link">Create an account</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="login-overlay" id="login-overlay"></div>
+
+    <footer>
+        <div class="footer-top">
+            <button id="back-to-top">Back to top</button>
+        </div>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>Get to Know Us</h4>
+                <ul>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">About AmaStore</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                    <li><a href="#">AmaStore Devices</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Make Money with Us</h4>
+                <ul>
+                    <li><a href="#">Sell products on AmaStore</a></li>
+                    <li><a href="#">Sell on AmaStore Business</a></li>
+                    <li><a href="#">Become an Affiliate</a></li>
+                    <li><a href="#">Advertise Your Products</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Payment Products</h4>
+                <ul>
+                    <li><a href="#">AmaStore Business Card</a></li>
+                    <li><a href="#">Shop with Points</a></li>
+                    <li><a href="#">Reload Your Balance</a></li>
+                    <li><a href="#">AmaStore Currency Converter</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Let Us Help You</h4>
+                <ul>
+                    <li><a href="#">Your Account</a></li>
+                    <li><a href="#">Your Orders</a></li>
+                    <li><a href="#">Shipping Rates & Policies</a></li>
+                    <li><a href="#">Returns & Replacements</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-logo">
+                <a href="#">AmaStore</a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2023 AmaStore.com, Inc. or its affiliates</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
